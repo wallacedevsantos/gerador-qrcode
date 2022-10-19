@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+html {
+    font-size: 62,5%;
+    background-color: rgba(128, 186, 253, 0.678);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    max-width: 100vh;
+    margin: 30px;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo .logo-img {
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+.wrapper {
+    background-color: #eee;
+    height: 250px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 .8rem 2.5rem rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    max-height: 100%;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.wrapper.active .header h1 {
+    font-size: 1.5rem;
+}
+
+
+.wrapper .header-form {
+    padding-left: 5%; /* Trabalhar com porcentagem é melhor quando usa display block / none em variações de div*/ 
+    margin-right: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .header h1 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.wrapper .header p {
+    font-size: .8rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.wrapper .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .form input {
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    height: 40px;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: .1rem solid green;
+}
+
+.wrapper .form input::placeholder {
+    padding-left: .2rem;
+    color: black;
+}
+
+.wrapper .form button {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(74, 151, 97);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #eee;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.wrapper .form button:hover {
+    border: .1rem solid rgb(74, 151, 97);
+    color: rgb(74, 151, 97);
+    background-color: transparent;
+    font-weight: bolder;
+}
+
+.wrapper .qr-code {
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    display: none;
+    width: 80%;
+    text-align: center;
+    justify-items: center;
+    height: 30px;
+    background-color: rgb(74, 151, 87);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    transition: all .3s;
+    margin-top: .5rem;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #eee;
+    font-size: .9rem;
+}
+
+.wrapper.active .resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.wrapper.active .qr-code {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    transition: all .5s .5s ease;
+}
+
+.wrapper.active .btn {
+    display: block;
+}
+.wrapper .qr-code img {
+    height: 150px;
+    background-color: white;
+}
+
+
+@media screen and (max-width: 545px) {
+    .wrapper.active .header h1 {
+        font-size: 1.3rem;
+    }
+    .wrapper.active .header p {
+        font-size: .7rem;
+    }
+}
+
+
+@media screen and (max-width: 425px ) {
+    .wrapper.active {
+        flex-wrap: wrap;
+        height: 440px;
+        max-height: 100%;
+    }
+    .wrapper.active .resultado{
+        margin-right: 0px;
+    }   
+}
+
+@media screen and (max-width: 320px) {
+    .wrapper.active .header h1 {
+        font-size: 1.3rem;
+    }
+    .wrapper.active .header p {
+        font-size: .7rem;
+    }
+}
