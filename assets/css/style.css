@@ -214,6 +214,25 @@ body {
     }
 }
 
+@media screen and (max-width: 295px) {
+    .wrapper .header h1 {
+        font-size: 1.1rem;
+    }
+    .wrapper .header p {
+        font-size: .6rem;
+    }
+}
+
+@media screen and (max-width: 258px) {
+    .wrapper .header h1 {
+        font-size: 1rem;
+    }
+    .wrapper .header p {
+        font-size: .5rem;
+    }
+}
+
+
 @media screen and (max-width: 320px) {
     .wrapper.active .header h1 {
         font-size: 1.3rem;
@@ -222,3 +241,5 @@ body {
         font-size: .7rem;
     }
 }
+
+
